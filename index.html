@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Elements del DOM</title>
+</head>
+<body>
+    <nav>
+        <p>Sergio Moyano</p>
+        <p>DAW 2B</p>
+    </nav>
+
+    <div class="content">
+        <div class="intro">
+            <h1>M06_06_FT_01 - Elements del DOM</h1>
+            <p>Ésta web es una demostración del Document Object Model (DOM), ya que para hacerla ha sido necesario modificar el estilo de los elementos del DOM y a la vez añadir eventos a estos. Podemos dividirla en 4 apartados:</p>
+            <ul>
+                <li>DOM Style</li>
+                <li>DOM Element</li>
+                <li>DOM Document</li>
+                <li>DOM Events</li>
+            </ul>
+            <img src="./media/img/dom.png" alt="">
+            <br><br>
+        </div>
+        
+        <div class="styleContent contentTemplate">
+            <h4>DOM Style</h4>
+            <div>
+                <div class="styleDivExample">DIV</div>
+                <div id="styleDivExplain1">
+                    <p>Este DIV contiene las siguientes propiedades de estilo:</p>
+                    <ul>
+                        <li>width: 5em</li>
+                        <li>height: 5em</li>
+                        <li>background-color: red</li>
+                        <li>border-radius: 20%</li>
+                        <li>margin: 0em 3em</li>
+                    </ul>
+                    <p>Propiedades como éstas nos permiten moldear cualquier elemento del DOM. En éste caso le he aplicado dimensiones de altura y anchura, color de fondo, margen y borde redondeado.</p>
+                </div>
+            </div>
+            <br><hr><br>
+            <div>
+                <div id="styleDivExplain2">
+                    <p>También podemos aplicar estilo a elementos del DOM que contengan texto:</p>
+                    <table>
+                        <tr>
+                            <td><div id="txtEx1">Texto de ejemplo</div></td>
+                            <td>
+                                <pre>
+#txtEx1 {
+    color: pink;
+    font-size: medium;
+}</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div id="txtEx2">Texto de ejemplo</div></td>
+                            <td>
+                                <pre>
+#txtEx2 {
+    color: aquamarine;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+}</pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><div id="txtEx3">Texto de ejemplo</div></td>
+                            <td>
+                                <pre>
+#txtEx3 {
+    color: coral;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: line-through;
+}</pre>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+
+        <br>
+        
+        <div class="elementContent contentTemplate">
+            <h4>DOM Element</h4>
+            <p>Con Javascript podemos encontrar elementos del DOM gracias a los <span>ID</span>, <span>tags</span>, <span>clases</span>, <span>selectores de CSS</span> y <span>colecciones de objetos HTML</span>.</p>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Ejemplo</th>
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td><pre>document.getElementById(elemento);</pre></td>
+                </tr>
+                <tr>
+                    <td>Tags</td>
+                    <td><pre>document.getElementByTagName(tag);</pre></td>
+                </tr>
+                <tr>
+                    <td>Clases</td>
+                    <td><pre>document.getElementByClassName(nombre);</pre></td>
+                </tr>
+                <tr>
+                    <td>Selector CSS</td>
+                    <td><pre>document.querySelector(selector);</pre></td>
+                </tr>
+            </table>
+            <br>
+        </div>
+
+        <br>
+
+        <div class="documentContent contentTemplate">
+            <h4>DOM Document</h4>
+            <p>Podemos añadir, modificar y eliminar contenido del DOM gracias a funciones de Javascript</p>
+            <table>
+                <tr>
+                    <td>Crear elemento HTML</td>
+                    <td><pre>document.createElement(element);</pre></td>
+                </tr>
+                <tr>
+                    <td>Eliminar elemento HTML</td>
+                    <td><pre>document.removeChild(element);</pre></td>
+                </tr>
+                <tr>
+                    <td>Añadir elemento HTML</td>
+                    <td><pre>document.appendChild(element);</pre></td>
+                </tr>
+                <tr>
+                    <td>Reemplazar elemento HTML</td>
+                    <td><pre>document.replaceChild(nuevo, antiguo);</pre></td>
+                </tr>
+                <tr>
+                    <td>Modificar contenido HTML</td>
+                    <td><pre>element.innerHTML = contenido;</pre></td>
+                </tr>
+                <tr>
+                    <td>Modificar estilo</td>
+                    <td><pre>document.style.propiedad = valor;</pre></td>
+                </tr>
+            </table>
+            <br>
+        </div>
+
+        <br>
+
+        <div class="demostracionContent contentTemplate">
+            <h4>DOM Events y Demostración</h4>
+            <p>Los eventos nos permiten crear web dinámicas y navegar por los nodos del DOM. Existen eventos de diferentes tipos, como por ejemplo de raton: click, mouseover, mousedown, mouseenter... También hay eventos para teclas e incluso para estados (como el evento load).</p>
+            <p>Para realizar estas demostraciones he tenido que hacer uso de los DOM Events, que han sido añadidos a un DOM Element gracias a la función addEventListener(), asignándoles un evento de click.</p>
+            <table>
+                <tr>
+                    <td id="contenidoModificar">Texto a modificar</td>
+                    <td><button id="btnModificarContentido">Click para modificar</button></td>
+                </tr>
+                <tr>
+                    <td><div id="divDemo1">DIV</div></td>
+                    <td><button id="btnCambiarEstilo">Click para modificar el estilo</button></td>
+                </tr>
+            </table><br>
+
+            <h4>Generadores de elementos</h4>
+            <p>A continuación encontrarás un botón que permite generar nuevos elementos HTML. Éste en concreto está programado para generar divs con una clase llamada "ejNewElement" con un estilo predefinido. Pruébalo!</p>
+            <p>Código utilizado:</p>
+            <pre>btnAddElement.addEventListener('click', () => {
+    var div = document.createElement('div');
+    div.classList.add('ejNewElement');
+    div.innerHTML = 'Nuevo div';
+    div.setAttribute("id", autoDivId);
+    autoDivId += 1;
+    div.setAttribute('onClick', "identificarElemento()");
+    addDiv.appendChild(div);
+});</pre>
+            <button id="btnAddDiv">Añadir nuevo elemento (DIV)</button><br>
+            <div id="addDiv"></div><br>
+
+            <p>También he programado un botón con el que pondemos añadir texto a nuestro DOM. Aquí se genera un nuevo elemento "p" y el usuario puede escribir el texto mediante un prompt():</p>
+            <button id="btnAddP">Añadir texto</button>
+            <div id="addP"></div><br>
+
+            <p>Finalmente he creado un botón que ejecuta la función removeChild(), que nos permite eliminar elementos HTML. Prueba a hacer click en el botón para eliminar el div amarillo:</p>
+            <div id="demoEliminarElemento">
+                <td><button onclick="eliminarElemento()">Eliminar DIV</button></td>
+                <td><div id="eliminarDiv">DIV</div></td>
+            </div>
+            <br>
+        </div>
+
+        <br>
+
+        <div class="demostracionContent contentTemplate">
+            <h4>Atributos personalizados</h4>
+            <div class="listaNombres">
+                <ul>
+                    <li id="nombreAna" data-edad="50">Ana</li>
+                    <li id="nombreAlfonso" data-edad="51">Alfonso</li>
+                    <li id="nombreSergio" data-edad="21">Sergio</li>
+                </ul>
+                
+            </div>
+            <button onclick="mostrarEdades()">Ver edades</button>
+            <br>
+            <div id="mostrarMedia"></div>
+            <button onclick="mediaEdades()">Ver media</button>
+            <br>
+        </div>
+
+        <br>
+
+        <div class="contentTemplate">
+            <h4>Ejemplos con jsFiddle</h4>
+            <iframe width="100%" height="300" src="https://jsfiddle.net/sergiomoyano/f9gqou01/73/embedded/html,css,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            <iframe width="100%" height="300" src="https://jsfiddle.net/sergiomoyano/2rsebf50/127/embedded/html,css,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </div>
+        
+        <footer>
+            <p>Sergio Moyano</p>
+            <a href="https://github.com/sergiocode">https://github.com/sergiocode</a>
+        </footer>
+        
+        <br>
+
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

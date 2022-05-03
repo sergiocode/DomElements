@@ -1,0 +1,252 @@
+body {
+    background-color: #202020;
+    color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    text-align: justify;
+}
+
+span {
+    color: greenyellow;
+    text-decoration: underline;
+}
+
+pre {
+    color: yellow;
+    background-color: #031a25;
+    padding: 0.5em;
+}
+
+hr {
+    width: 70vw;
+    background-color: gray;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+h1 {
+    color: white;
+    position: relative;
+    top: 0em;
+}
+
+h4 {
+    font-size: larger;
+    text-decoration: underline;
+}
+
+th {
+    background-color: rgb(70, 70, 70);
+    padding: 1em;
+    border: solid rgb(88, 88, 88, 1) 1px;
+}
+
+td {
+    padding: 0.5em;
+    background-color: rgb(52, 52, 52, 1);
+}
+
+button {
+    color: white;
+    background-color: rgb(96, 96, 96, 1);
+    border: unset;
+    height: 3em;
+}
+
+button:active {
+    background-color: rgb(75, 75, 75);
+    color: rgb(192, 192, 192);
+}
+
+nav {
+    width: 100vw;
+    height: 5em;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav p {
+    color: black;
+    margin: 0em 1em;
+    font-size: x-large;
+}
+
+iframe {
+    width: 55vw;
+    height: 30em;
+    margin: 1em;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color:rgb(44, 207, 207);
+}
+
+footer a:active {
+    color:rgb(16, 145, 145);
+}
+
+.content {
+    position: relative;
+    top: 8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentTemplate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: rgb(48, 48, 48);
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+}
+
+.styleContent {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.styleDivExample {
+    width: 5em;
+    height: 5em;
+    background-color: red;
+    border-radius: 20%;
+    margin: 0em 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.styleContent div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#styleDivExplain1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#styleDivExplain1 p {
+    width: 45vw;
+}
+
+
+#styleDivExplain2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#styleDivExplain2 p {
+    width: 50vw;
+}
+
+.styleTxtExample {
+    width: 28em;
+}
+
+#txtEx1 {
+    color: pink;
+    font-size: medium;
+}
+
+#txtEx2 {
+    color: aquamarine;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#txtEx3 {
+    color: coral;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: line-through;
+}
+
+/*DEMOSTRACIÓN*/
+
+.demostracionContent p {
+    width: 55vw;
+}
+
+#divDemo1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5em;
+    height: 5em;
+    background-color: springgreen;
+}
+
+#addDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    max-width: 55vw;
+}
+
+.ejNewElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: coral;
+    width: 6em;
+    height: 3em;
+    margin: 0.5em;
+}
+
+.ejNewP {
+    text-align: justify;
+    color: white;
+    background-color: #2a2a2a;
+    padding: 0.5em;
+}
+
+#demoEliminarElemento {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#eliminarDiv {
+    width: 5em;
+    height: 5em;
+    background-color: rgb(224, 224, 0);
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0em 1em;
+}
+
+.listaNombres {
+    display: flex;
+    flex-direction: row;
+}
